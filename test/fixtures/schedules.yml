@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event: one
+  fighter: one
+  time: MyString
+
+two:
+  event: two
+  fighter: two
+  time: MyString
