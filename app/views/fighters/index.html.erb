@@ -1,11 +1,9 @@
 <h1>Fighters</h1>
 
 <ul>
-
     <% @fighters.each do |fighter| %>
         <li>
             <%= link_to fighter.name, fighter_path(fighter) %>
         </li>
     <% end %>
 </ul>
-
