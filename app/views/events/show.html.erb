@@ -1,0 +1,12 @@
+<h2 class="event-header"> Event </h2>
+
+<p> Name: <%= @event.name %> </p>
+<p> Viewing: <%= @event.platform.name %> </p>
+<p> location: <%= @event.location %> </p>
+
+<img src="<%= @event.image_url %>" >
+<% if @main_event_fighter %>
+    <h3> <%= "#{@main_event_fighter.first_fighter.name} VS #{@main_event_fighter.second_fighter.name}" %> </h3>
+<% end %>
+
+

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_13_232014) do
+ActiveRecord::Schema.define(version: 2021_02_15_193705) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2021_02_13_232014) do
     t.string "location"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "image_url"
     t.index ["platform_id"], name: "index_events_on_platform_id"
   end
 
@@ -40,6 +41,18 @@ ActiveRecord::Schema.define(version: 2021_02_13_232014) do
     t.string "fighting_record"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "image_url"
+  end
+
+  create_table "main_event_fighters", force: :cascade do |t|
+    t.bigint "first_fighter_id"
+    t.bigint "second_fighter_id"
+    t.bigint "event_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["event_id"], name: "index_main_event_fighters_on_event_id"
+    t.index ["first_fighter_id"], name: "index_main_event_fighters_on_first_fighter_id"
+    t.index ["second_fighter_id"], name: "index_main_event_fighters_on_second_fighter_id"
   end
 
   create_table "platforms", force: :cascade do |t|
@@ -68,6 +81,8 @@ ActiveRecord::Schema.define(version: 2021_02_13_232014) do
   add_foreign_key "channels", "platforms"
   add_foreign_key "channels", "users"
   add_foreign_key "events", "platforms"
+  add_foreign_key "main_event_fighters", "fighters", column: "first_fighter_id"
+  add_foreign_key "main_event_fighters", "fighters", column: "second_fighter_id"
   add_foreign_key "schedules", "events"
   add_foreign_key "schedules", "fighters"
 end

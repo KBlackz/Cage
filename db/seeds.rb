@@ -5,30 +5,25 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Fighter.destroy_all
+Event.destroy_all
+MainEventFighter.destroy_all
+Platform.destroy_all
+
+khabib = Fighter.create(name: "Khabib", style: "Sambo", fighting_record: "29-0", image_url: "https://media.gettyimages.com/photos/khabib-nurmagomedov-of-russia-celebrates-his-submission-victory-over-picture-id1166604497?s=612x612")
+kamaru = Fighter.create(name: "Kamaru Usman", style: "freestyle wrestling", fighting_record: "17-1-0", image_url: "https://images-na.ssl-images-amazon.com/images/I/41U6YaL1t-L._AC_.jpg")
+gilbert = Fighter.create(name: "Gilbert Burns", style: "submission", fighting_record: "19-3-0", image_url: "https://i.ytimg.com/vi/YOWv7qvkNYU/maxresdefault.jpg")
+maycee = Fighter.create(name: "Maycee Barber", style: "Karate", fighting_record: "8-1-0", image_url: "https://assets-cms.thescore.com/uploads/image/file/400533/w640xh480_GettyImages-1200203151.jpg?ts=1586975232")
+alexa = Fighter.create(name: "Alexa Grasso", style: "Jiu Jitsu", fighting_record: "12-3-0", image_url: "https://cdn.shopify.com/s/files/1/1892/6857/collections/IMG_3437_590x.jpg?v=1561088674")
+mcgeror = Fighter.create(name: "Conor Mcgregor", style: "Martial arts", fighting_record: "22-5-0", image_url: "https://cnet4.cbsistatic.com/img/9XTushsU2RAjBX3CyYFRsBNZ5Cc=/940x0/2020/01/14/af9ce5fe-22e9-4508-81a3-d43540fc0e6d/gettyimages-592224614.jpg")
+dustin = Fighter.create(name: "Dustin Poirier", style: "boxing", fighting_record: "27-3-0", image_url: "https://www.thesun.co.uk/wp-content/uploads/2020/10/NINTCHDBPICT000611984614.jpg?strip=all&w=640")
+
+platform_one = Platform.create(name: 'ESPN')
+#Events
 
 
-khabib = Fighter.create(name: "Khabib", style: "Sambo", fighting_record: "29-0")
-kamaru = Fighter.create(name: "Kamaru Usman", style: "freestyle wrestling", fighting_record: "17-1-0")
-gilbert = Fighter.create(name: "Gilbert Burns", style: "submission", fighting_record: "19-3-0")
-maycee = Fighter.create(name: "Maycee Barber", style: "Karate", fighting_record: "8-1-0")
-alexa = Fighter.create(name: "Alexa Grasso", style: "Jiu Jitsu", fighting_record: "12-3-0")
-keiven = Fighter.create(name: "Keiven Gastelum", style: "Wrestling", fighting_record: "16-6-0")
-ian = Fighter.create(name: "Ian Heinisch", style: "Muay thai", fighting_record: "14-3-0")
+ufc258 = Event.create(platform_id: platform_one.id, name: "UFC 258", location: "UFC Apex", image_url: "https://cdn.vox-cdn.com/thumbor/ZuBjUjBCRrSYF7diR4ZJw-5iD9U=/0x0:4465x3108/920x613/filters:focal(1805x0:2519x714):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/68813395/1301819163.0.jpg")
 
-# Platform
-
-hbo = Platform.create(name: "HBO")
-espn = Platform.create(name: "ESPN")
-youtube = Platform.create(name: "Youtube")
-payper = Platform.create(name: "PayPer View")
-
-# Events
-
-ufc258 = Event.create(platform_id: 1, name: "UFC 258", location: "UFC Apex") 
-ufc256 = Event.create(platform_id: 2, name: "UFC 256", location: "UFC Apex") 
-ufc257 = Event.create(platform_id: 3, name: "UFC 257", location: "Madison Square Garden") 
-ufc259 = Event.create(platform_id: 4, name: "UFC 259", location: "Abu Dhabi") 
-
-# Schedules
-
-
+ufc256 = Event.create(platform_id: platform_one.id, name: "UFC 256", location: "UFC Apex", image_url: "https://www.168moviestream.com/wp-content/uploads/2020/12/ufc-256-1.jpg")
+ufc257 = Event.create(platform_id: platform_one.id, name: "UFC 257", location: "Madison Square Garden", image_url: "https://cdn-wp.thesportsrush.com/2020/11/fc625d3b-ufc-257.jpg")
+ufc259 = Event.create(platform_id: platform_one.id, name: "UFC 259", location: "Abu Dhabi", image_url: "https://www.fightsports.tv/wp-content/uploads/Eqh836OXMAIYc2a.jpg")
