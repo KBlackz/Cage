@@ -19,11 +19,16 @@ mcgeror = Fighter.create(name: "Conor Mcgregor", style: "Martial arts", fighting
 dustin = Fighter.create(name: "Dustin Poirier", style: "boxing", fighting_record: "27-3-0", image_url: "https://www.thesun.co.uk/wp-content/uploads/2020/10/NINTCHDBPICT000611984614.jpg?strip=all&w=640")
 
 platform_one = Platform.create(name: 'ESPN')
+platform_second = Platform.create(name: 'YouTube')
+platform_three = Platform.create(name: 'HBO')
+platform_four = Platform.create(name: 'PayPer View')
 #Events
 
 
 ufc258 = Event.create(platform_id: platform_one.id, name: "UFC 258", location: "UFC Apex", image_url: "https://cdn.vox-cdn.com/thumbor/ZuBjUjBCRrSYF7diR4ZJw-5iD9U=/0x0:4465x3108/920x613/filters:focal(1805x0:2519x714):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/68813395/1301819163.0.jpg")
 
-ufc256 = Event.create(platform_id: platform_one.id, name: "UFC 256", location: "UFC Apex", image_url: "https://www.168moviestream.com/wp-content/uploads/2020/12/ufc-256-1.jpg")
-ufc257 = Event.create(platform_id: platform_one.id, name: "UFC 257", location: "Madison Square Garden", image_url: "https://cdn-wp.thesportsrush.com/2020/11/fc625d3b-ufc-257.jpg")
-ufc259 = Event.create(platform_id: platform_one.id, name: "UFC 259", location: "Abu Dhabi", image_url: "https://www.fightsports.tv/wp-content/uploads/Eqh836OXMAIYc2a.jpg")
+ufc256 = Event.create(platform_id: platform_four.id, name: "UFC 256", location: "UFC Apex", image_url: "https://www.168moviestream.com/wp-content/uploads/2020/12/ufc-256-1.jpg")
+ufc257 = Event.create(platform_id: platform_second.id, name: "UFC 257", location: "Madison Square Garden", image_url: "https://cdn-wp.thesportsrush.com/2020/11/fc625d3b-ufc-257.jpg")
+ufc259 = Event.create(platform_id: platform_three.id, name: "UFC 259", location: "Abu Dhabi", image_url: "https://www.fightsports.tv/wp-content/uploads/Eqh836OXMAIYc2a.jpg")
+
+
