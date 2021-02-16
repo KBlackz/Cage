@@ -5,8 +5,20 @@
 <p> location: <%= @event.location %> </p>
 
 <img src="<%= @event.image_url %>" >
-<% if @main_event_fighter %>
-    <h3> <%= "#{@main_event_fighter.first_fighter.name} VS #{@main_event_fighter.second_fighter.name}" %> </h3>
-<% end %>
+# <% if @main_event_fighter %>
+#     <h3> <%= "#{@main_event_fighter.first_fighter.name} VS #{@main_event_fighter.second_fighter.name}" %> </h3>
+# <% end %>g
+
+
+
+<h2> List of Fighters </h2>
+
+<ol>
+    <% @event.fighters.each do |fighter_inst| %>
+        <li>
+            <%=link_to fighter_inst.name, fighter_path(fighter_inst) %> 
+        </li>
+    <%end%>
+</ol>
 
 
