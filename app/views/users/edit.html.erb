@@ -1,0 +1,13 @@
+<h1>Edit Account <%=User.name%></h1>
+
+    <%= form_for @user do |f| %>
+
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+
+        <%= f.label :age %>
+        <%= f.text_field :age %>
+        
+    <%end%>
+
+        

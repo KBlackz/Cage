@@ -34,7 +34,7 @@ ufc256 = Event.create(platform_id: platform_four.id, name: "UFC 256", location: 
 ufc257 = Event.create(platform_id: platform_second.id, name: "UFC 257", location: "Madison Square Garden", image_url: "https://cdn-wp.thesportsrush.com/2020/11/fc625d3b-ufc-257.jpg")
 ufc259 = Event.create(platform_id: platform_three.id, name: "UFC 259", location: "Abu Dhabi", image_url: "https://www.fightsports.tv/wp-content/uploads/Eqh836OXMAIYc2a.jpg")
 
+# schedules
 
-
-
-
+schedule1 = Schedule.create(fighter_id: kamaru.id, event_id: ufc258.id)
+# schedule2 = Schedule.create(fighter_id: gilbert.id, event_id: ufc258.id)

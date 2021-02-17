@@ -1,0 +1,13 @@
+<h1> Book a Fighter </h1>
+
+<%= form_for @schedules do |f| %>
+
+    
+    <%= f.label :event_id %>
+    <%= f.collection_select :event_id, @events, :id, :name %>
+    <%= f.label :fighter_id %>
+    <%= f.collection_select :fighter_id, @fighters, :id, :name %>
+    <%= f.submit %>
+
+<%end%>
+

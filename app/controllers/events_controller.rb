@@ -6,8 +6,7 @@ class EventsController < ApplicationController
     end
     
     def show 
-        @event = Event.find(params[:id])
-        @main_event_fighter = MainEventFighter.find_by(event: @event)
+        @event = Event.find(params[:id])   
     end
     
     def new 
