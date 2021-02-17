@@ -37,4 +37,4 @@ ufc259 = Event.create(platform_id: platform_three.id, name: "UFC 259", location:
 # schedules
 
 schedule1 = Schedule.create(fighter_id: kamaru.id, event_id: ufc258.id)
-# schedule2 = Schedule.create(fighter_id: gilbert.id, event_id: ufc258.id)
+schedule2 = Schedule.create(fighter_id: gilbert.id, event_id: ufc258.id)

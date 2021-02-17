@@ -18,12 +18,14 @@ class SchedulesController < ApplicationController
 
     def edit
         @schedule = Schedule.find(params[:id])
+        @events = Event.all 
+        @fighters = Fighter.all
     end
 
     def update
         @schedule = Schedule.find(params[:id])
         @schedule.update(schedule_params)
-        redirect_to schedule_path(@schedule)
+        redirect_to event_path(@schedule.event.id)
     end
 
     def destroy

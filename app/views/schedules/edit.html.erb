@@ -3,12 +3,12 @@
 <%= form_for @schedule do |f| %>
 
 
-    <%= f.label :event_id %>
-    <%= f.collection_select :event_id, @events, :id, :name %>
-    <%= f.label :fighter_id %>
-    <%= f.collection_select :fighter_id, @fighters, :id, :name %>
-    <%= f.submit %>
-
+        <%= f.label :event_id %>
+        <%= f.collection_select :event_id, @events, :id, :name %>
+        <%= f.label :fighter_id %>
+        <%= f.collection_select :fighter_id, @fighters, :id, :name %>
+        <%= f.submit %>
+    
 <%end%>
-
-<%= link_to :schedule.name, schedule_path(schedule)%>
+    
+    
